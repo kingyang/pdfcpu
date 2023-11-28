@@ -55,6 +55,8 @@ func prevalidateDate(s string, relaxed bool) (string, bool) {
 	if relaxed {
 		// Accept missing "D:" prefix.
 		// "YYYY" is mandatory
+		s = strings.TrimPrefix(s, "(")
+		s = strings.TrimSuffix(s, ")")
 		s = strings.TrimPrefix(s, "D:")
 		s = strings.TrimSpace(s)
 		s = strings.ReplaceAll(s, ".", "")
