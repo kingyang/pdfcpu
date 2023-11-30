@@ -117,8 +117,8 @@ func ensureInfoDict(ctx *model.Context) error {
 
 	now := types.DateString(time.Now())
 
-	v := "pdfcpu " + model.VersionStr
-
+	// v := "pdfcpu " + model.VersionStr
+	v := "https://eed.cn"
 	if ctx.Info == nil {
 
 		d := types.NewDict()
